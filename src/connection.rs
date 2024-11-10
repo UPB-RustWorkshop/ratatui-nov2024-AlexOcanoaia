@@ -25,7 +25,7 @@ pub enum MyError {
 ///
 /// Returns weather details about a certain city
 pub async fn get_data(city: String) -> Result<CityInfo, MyError>{
-    let apy_key = "4d92d92f10f78581948b04916b86c42a";
+    let apy_key = "";
     let url = format!("https://api.openweathermap.org/data/2.5/weather?q={}&appid={}", city, apy_key);
     let tmp = reqwest::get(url).await;
     match tmp {
